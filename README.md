@@ -1,2 +1,4 @@
-# LIBFT 42network
-stupid person make a stupid libft :p
+# LIBFT 42network by 7ARZAN.
+
+
+----------------   A stupid person make stupid libft 🥇.  ----------------
