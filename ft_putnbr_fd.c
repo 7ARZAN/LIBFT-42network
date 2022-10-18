@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 15:05:41 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/17 20:12:16 by elakhfif         ###   ########.fr       */
+/*   Created: 2022/10/17 17:36:26 by elakhfif          #+#    #+#             */
+/*   Updated: 2022/10/17 23:32:33 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
+	long	x;
 
-	if (!dest && !src)
-		return (0);
-	i = 0;
-	while (i < n)
+	x = n;
+	if (x < 0)
 	{
-		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-		i++;
+		x = -x;
+		write(fd, "-", 1);
 	}
-	return (dest);
+	if (x <= 9)
+	{
+		x = x + 48;
+		write(fd, &x, 1);
+	}
+	else
+	{
+		ft_putnbr_fd(x / 10, fd);
+		ft_putnbr_fd(x % 10, fd);
+	}
 }
-/*
-int main()
-{
-	int a;
-	int	b = 256;
-	int *s = ft_memcpy(&a, &b, 1);
-	printf("%d\n", s[0]);
-}
-*/

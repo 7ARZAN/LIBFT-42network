@@ -6,7 +6,7 @@
 #    By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022\10/03 21:50:13 by elakhfif          #+#    #+#              #
-#    Updated: 2022/10/12 12:20:45 by elakhfif         ###   ########.fr        #
+#    Updated: 2022/10/17 17:58:58 by elakhfif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,10 @@ SRC =	ft_isalpha.c\
 		ft_substr.c\
 		ft_calloc.c\
 		ft_strjoin.c\
+		ft_split.c\
+		ft_itoa.c\
+		ft_putnbr_fd.c\
+		ft_striteri.c\
 
 OBJ = $(SRC:%.c=%.o)
 

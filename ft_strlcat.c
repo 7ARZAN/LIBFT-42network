@@ -6,7 +6,7 @@
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:26:07 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/09 02:53:02 by elakhfif         ###   ########.fr       */
+/*   Updated: 2022/10/15 20:40:02 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,22 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	while (src[i] != '\0' && lnth + 1 < dstsize)
 	{
-	dst[lnth] = src[i];
-	lnth++;
-	i++;
+		dst[lnth] = src[i];
+		lnth++;
+		i++;
 	}
 	dst[lnth] = '\0';
 	return (len);
 }
+/*
+#include <stdio.h>
+
+int main()
+{
+	    char s1[30] = "Dans cette premiere partie";
+        char s2[10] = "fallahi";
+        printf("len s1 %ld\n", ft_strlen(s1));
+        printf("len s2 %ld\n", ft_strlen(s2));
+        printf("%zu\n", ft_strlcat(s1,s2, 6));
+}
+*/
