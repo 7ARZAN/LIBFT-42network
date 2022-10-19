@@ -6,7 +6,7 @@
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 20:12:59 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/18 20:02:56 by elakhfif         ###   ########.fr       */
+/*   Updated: 2022/10/18 23:34:03 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 
 	split = (char **)malloc((count_words(s, c) + 1) * (sizeof(char *)));
-	if (!s || !c || !split)
+	if (!split)
 		return (NULL);
 	start = 0;
 	end = 0;
@@ -62,7 +62,7 @@ char	**ft_split(char const *s, char c)
 int main() 
 {
 	int i = 0;
-    char **test = ft_split("Hello World", '\0');
+    char **test = ft_split("\0Hello\0World", '\0');
     while(test[i])
 	{
 		printf("%s", test[i]);

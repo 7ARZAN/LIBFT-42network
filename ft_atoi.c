@@ -6,7 +6,7 @@
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 05:56:24 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/09 10:35:20 by elakhfif         ###   ########.fr       */
+/*   Updated: 2022/10/18 23:59:39 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,11 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
+/*
+int main()
+{
+    char *n = "945";
+	printf("%d\n",atoi(n));
+	printf("%d\n",ft_atoi(n));
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:11:27 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/07 09:51:19 by elakhfif         ###   ########.fr       */
+/*   Updated: 2022/10/18 23:51:37 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		i++;
 	return (i);
 }
+/*
+int main()
+{
+	    char src[27] = "Dans cette première partie";
+        char dest[27];
+
+        printf("%ld\n",ft_strlcpy(dest, src,0));
+
+		printf("%s\n", dest);
+}
+*/

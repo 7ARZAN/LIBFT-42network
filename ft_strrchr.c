@@ -6,7 +6,7 @@
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:39:02 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/11 22:21:01 by elakhfif         ###   ########.fr       */
+/*   Updated: 2022/10/18 23:54:44 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,10 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)(s + j));
 	return (0);
 }
+/*
+int main()
+{
+	char s1[20] = "fallahi ";
+    printf("fst occurence %s .\n", ft_strrchr(s1, 'f'));
+}
+*/

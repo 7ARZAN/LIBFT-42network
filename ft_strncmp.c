@@ -1,43 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 21:45:38 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/19 00:01:23 by elakhfif         ###   ########.fr       */
+/*   Created: 2022/10/19 00:59:43 by elakhfif          #+#    #+#             */
+/*   Updated: 2022/10/19 01:43:53 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	void	*ptr;
-	size_t	mem_size;
+	size_t	i;
 
-	if (count == SIZE_MAX && size == SIZE_MAX)
-		return (NULL);
-	mem_size = count * size;
-	ptr = malloc(mem_size);
-	if (!ptr)
-		return (NULL);
-	ft_bzero(ptr, mem_size);
-	return (ptr);
+	i = 0;
+	if (n == 0)
+		return (0);
+	while ((s1[i] == s2[i]) && s1[i] != 0 && s2[i] != 0 && i < n - 1)
+		i++;
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 /*
 int main()
 {
-	char *j;
+	char s1[10] = "fallahi ";
+	char s2[10] = "fellahi ";
 
-    j = ft_calloc(4,sizeof(char));
-    int i = 0;
-    while(i < 4)
-	{
-		printf("%d\n",j[i]);         
-		i++;
-	}
-	free(j);
+	printf("ft_strncmp %d .\n", ft_strncmp(s1,s2,2));
+	printf("strncmp %d .\n",    strncmp(s1,s2,2));
 }
 */

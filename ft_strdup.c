@@ -6,7 +6,7 @@
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:10:42 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/09 03:03:45 by elakhfif         ###   ########.fr       */
+/*   Updated: 2022/10/19 00:02:38 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,13 @@ char	*ft_strdup(const char *s1)
 	str[indx] = '\0';
 	return (str);
 }
+/*
+int main()
+{
+	char 	*str;
+	char	*tmp = "HAHAHA \0 tu me vois pas !";
+    int l = ft_strlen(tmp);
+	str = ft_strdup(tmp);
+	printf ("%d\n",ft_strncmp(str, tmp,l));
+}
+*/

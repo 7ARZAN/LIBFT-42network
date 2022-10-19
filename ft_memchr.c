@@ -6,7 +6,7 @@
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:04:13 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/05 15:18:18 by elakhfif         ###   ########.fr       */
+/*   Updated: 2022/10/18 23:57:19 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,23 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
+/*
+int main()
+{
+        int t[4] = {3,2,1,0};
+        int c = 2;
+        int *p;
+        p = ft_memchr(t,c,6);
+        int i = 0;
+        while(i < 3)
+                printf("%d",p[i++]);
+
+
+
+
+        char k[] = "fallahi";
+        char *str;
+        str =ft_memchr(k, 'a',4);
+        printf("%s\n",str);
+}
+*/
