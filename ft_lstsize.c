@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 15:39:02 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/20 23:31:36 by elakhfif         ###   ########.fr       */
+/*   Created: 2022/10/20 21:02:35 by elakhfif          #+#    #+#             */
+/*   Updated: 2022/10/20 21:06:52 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_lstsize(t_list *lst)
 {
-	int	i;
-	int	size;
+	int		len;
+	t_list	*next;
 
-	size = (int)ft_strlen(s);
-	i = size;
-	while (i > 0 || i == 0)
+	len = 0;
+	next = lst;
+	while (next != NULL)
 	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
-		i--;
+		next = next->next;
+		len++;
 	}
-	return (NULL);
+	return (len);
 }
-/*
-int main()
-{
-	char s1[20] = "fallahi ";
-    printf("fst occurence %s .\n", ft_strrchr(s1, 'f'));
-}
-*/

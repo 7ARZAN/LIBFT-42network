@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 15:39:02 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/20 23:31:36 by elakhfif         ###   ########.fr       */
+/*   Created: 2022/10/20 21:32:51 by elakhfif          #+#    #+#             */
+/*   Updated: 2022/10/20 22:20:39 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	int	i;
-	int	size;
+	t_list	*current;
+	t_list	*next;
 
-	size = (int)ft_strlen(s);
-	i = size;
-	while (i > 0 || i == 0)
+	current = *lst;
+	while (current)
 	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
-		i--;
+		del(current->content);
+		next = current->next;
+		free(current);
+		current = next;
 	}
-	return (NULL);
+	*lst = NULL;
 }
-/*
-int main()
-{
-	char s1[20] = "fallahi ";
-    printf("fst occurence %s .\n", ft_strrchr(s1, 'f'));
-}
-*/

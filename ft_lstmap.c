@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 15:39:02 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/20 23:31:36 by elakhfif         ###   ########.fr       */
+/*   Created: 2022/10/20 22:30:21 by elakhfif          #+#    #+#             */
+/*   Updated: 2022/10/20 22:44:08 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int	i;
-	int	size;
+	t_list	*ptr;
+	t_list	*new;
 
-	size = (int)ft_strlen(s);
-	i = size;
-	while (i > 0 || i == 0)
+	if (!f || !lst)
+		return (NULL);
+	ptr = ft_lstnew(f(lst->content));
+	lst = lst->next;
+	while (lst)
 	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
-		i--;
+		new = ft_lstnew(f(lst->content));
+		if (!new)
+		{
+			ft_lstclear(&ptr, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&ptr, new);
+		lst = lst->next;
 	}
-	return (NULL);
+	return (ptr);
 }
-/*
-int main()
-{
-	char s1[20] = "fallahi ";
-    printf("fst occurence %s .\n", ft_strrchr(s1, 'f'));
-}
-*/

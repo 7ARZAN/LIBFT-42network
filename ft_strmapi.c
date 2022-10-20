@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 15:39:02 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/20 23:31:36 by elakhfif         ###   ########.fr       */
+/*   Created: 2022/10/19 22:20:46 by elakhfif          #+#    #+#             */
+/*   Updated: 2022/10/19 22:32:53 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 {
-	int	i;
-	int	size;
+	unsigned int	index;
+	char			*str;
 
-	size = (int)ft_strlen(s);
-	i = size;
-	while (i > 0 || i == 0)
+	index = 0;
+	if (!s)
+		return (NULL);
+	str = (char *)malloc(ft_strlen(s) + 1);
+	if (str == NULL)
+		return (NULL);
+	while (s[index] != '\0')
 	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
-		i--;
+		str[index] = f(index, s[index]);
+		index++;
 	}
-	return (NULL);
+	str[index] = '\0';
+	return (str);
 }
-/*
-int main()
-{
-	char s1[20] = "fallahi ";
-    printf("fst occurence %s .\n", ft_strrchr(s1, 'f'));
-}
-*/
