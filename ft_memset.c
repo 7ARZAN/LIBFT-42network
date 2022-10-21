@@ -6,7 +6,7 @@
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:09:02 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/21 18:13:14 by elakhfif         ###   ########.fr       */
+/*   Updated: 2022/10/21 19:14:48 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-
+/*
 int main()
 {
 	    int t[5] = {1,2,4,2,5};
@@ -50,4 +50,4 @@ int main()
     char str1[50] = "Let us see a simple example in C";
     printf("\nBefore memset(): %s\n", str1);
 }
-
+*/
