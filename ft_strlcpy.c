@@ -6,7 +6,7 @@
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:11:27 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/20 22:29:36 by elakhfif         ###   ########.fr       */
+/*   Updated: 2022/10/21 17:42:21 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	i = 0;
-	if (dstsize == 0)
+	if (dstsize == '\0')
 	{
 		while (src[i])
 			i++;
@@ -37,10 +37,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 /*
 int main()
 {
-	    char src[27] = "Dans cette première partie";
+	    char src[] = "7ARZAN DA BEST!";
         char dest[27];
 
-        printf("%ld\n",ft_strlcpy(dest, src,0));
+        printf("%ld\n",ft_strlcpy(dest, src, 9));
 
 		printf("%s\n", dest);
 }

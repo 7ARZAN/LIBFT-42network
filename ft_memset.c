@@ -6,7 +6,7 @@
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:09:02 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/20 18:37:41 by elakhfif         ###   ########.fr       */
+/*   Updated: 2022/10/21 18:13:14 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,18 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-/*
+
 int main()
 {
-	    int t[4] = {2,4,2,5};
+	    int t[5] = {1,2,4,2,5};
         int *r;
-        r = ft_memset(t,32,1);
+        r = ft_memset(t,10,4);
         int i = 0;
-        while (i < 4)
+        while (i < 5)
         {
                 printf("%d\n",r[i]);
                 i++;
         }
-}
 
     char str[50] = "Let us see a simple example in C";
     printf("\nBefore memset(): %s\n", str);
@@ -50,10 +49,5 @@ int main()
 
     char str1[50] = "Let us see a simple example in C";
     printf("\nBefore memset(): %s\n", str1);
+}
 
-    // Fill 8 characters starting from str[13] with '.'
-    ft_memset(1000000, 68, 4*sizeof(char));
-
-    printf("After memset():  %s\n", str1);
-
-*/
