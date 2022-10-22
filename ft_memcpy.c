@@ -6,7 +6,7 @@
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:05:41 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/18 23:47:34 by elakhfif         ###   ########.fr       */
+/*   Updated: 2022/10/22 01:34:51 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int main()
 	int	b = 256;
 	int *s = ft_memcpy(&a, &b, 1);
 	printf("%d\n", s[0]);
+
 	char str[10] = "mohammed";
     char str1[10] = "fallahi";
     printf("before memcpy  : %s %s \n", str,str1);

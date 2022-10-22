@@ -6,7 +6,7 @@
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 22:20:46 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/19 22:32:53 by elakhfif         ###   ########.fr       */
+/*   Updated: 2022/10/21 20:30:41 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,18 @@ char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 	str[index] = '\0';
 	return (str);
 }
+/*
+#include <stdio.h>
+
+
+char shift(unsigned int i, char c)
+{
+	return c + 1;
+}
+
+int main()
+{
+	char 	str[] = "absddzed";
+	printf("%s\n",ft_strmapi(str, shift));
+}
+*/

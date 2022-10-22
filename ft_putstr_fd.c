@@ -6,7 +6,7 @@
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:31:54 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/09 03:11:41 by elakhfif         ###   ########.fr       */
+/*   Updated: 2022/10/21 20:23:36 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,14 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
+/*
+#include <fcntl.h>
+
+int main()
+{
+	int	fd;
+
+	fd = open("ft_putstr_fd.txt", O_CREAT | O_RDWR);
+	ft_putstr_fd("TARZAN" "NADY" "BZAF", fd);
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 22:52:23 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/20 18:43:20 by elakhfif         ###   ########.fr       */
+/*   Updated: 2022/10/22 00:27:27 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,22 @@ t_list	*ft_lstnew(void *content)
 	ptr->next = NULL;
 	return (ptr);
 }
+/*
+int main()
+{
+	t_list	*a;
+	t_list	*b;
+	t_list	*head;
+
+	a = ft_lstnew("tarzan");
+	b = ft_lstnew("Houscein");
+
+	a->next = b;
+	head = a;
+	while (head)
+	{
+		printf("%s", head->content);
+		head = head->next;
+	}
+}
+*/

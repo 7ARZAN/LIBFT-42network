@@ -6,7 +6,7 @@
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:21:42 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/13 17:49:19 by elakhfif         ###   ########.fr       */
+/*   Updated: 2022/10/21 20:20:00 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,12 @@ void	ft_putchar_fd(char c, int fd)
 	write(fd, &c, 1);
 }
 /*
-#include <stdio.h>
+#include <fcntl.h>
 
 int main()
 {
-	int fd ;
-        fd = open("ft_putchar_fd.txt" , fd);
-        
-        ft_putchar_fd('a', 0);
+	int fd;
+    fd = open("ft_putchar_fd.txt" , O_RDWR);
+    ft_putchar_fd('a', fd);
 }
 */
