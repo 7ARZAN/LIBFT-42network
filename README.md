@@ -2,10 +2,15 @@
 # LIBFT 42network by 7ARZAN.
 
 
-------------------***                   A stupid person make a stupid libft 🥇.                   ***------------------
 
-if u are here to take idea about my logic "Welcome" if u are here bach thez l codes "WELCOME" Ma3ndi magolik good luck 
-                    guys in ur next projects. LIBFT-42 125/100 small codes with all bonus bgae l7up
+
+
+
+
+------------------***                   A stupid person make a stupid libft 🥇.                   ***------------------
+                                  hey im 7ARZAN and this is my dirty pretty libft.                    
+
+                                LIBFT-42 125/100 small codes with all bonus bgae l7up
                                                   74RZANDAB3ST!
 
 
