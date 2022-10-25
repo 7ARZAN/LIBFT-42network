@@ -1,37 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 14:38:04 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/22 19:09:41 by elakhfif         ###   ########.fr       */
+/*   Created: 2022/10/25 06:55:41 by elakhfif          #+#    #+#             */
+/*   Updated: 2022/10/25 06:55:44 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	unsigned char	*a;
-	size_t			i;
-
-	a = s;
-	i = 0;
-	while (i < n)
-	{
-		a[i] = 0;
-		i++;
-	}
+	del(lst->content);
+	free(lst);
 }
 /*
+void	del(void *content)
+{
+	free(content);
+}
+
 int main()
 {
-    int t[4] = { 5, 4, 3, 2};
-    ft_bzero(t,6);
-    int i = 0;
-    while(i < 4)
-    printf("%d\n",t[i++]);
+	t_list	*a;
+	t_list	*b;
+	t_list	*head;
+
+	a = ft_lstnew(ft_strdup("TARZAN  RGRDFGDFG"));
+	b = ft_lstnew(ft_strdup("FDGDFGDFG TARZAN"));
+	a->next = b;
+	head = a;
+	ft_lstdelone(head, del);
+	while (head)
+	{
+		printf("%s", head->content);
+		head = head->next;
+	}
 }
 */

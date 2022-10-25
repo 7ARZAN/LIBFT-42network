@@ -6,7 +6,7 @@
 #    By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022\10/03 21:50:13 by elakhfif          #+#    #+#              #
-#    Updated: 2022/10/20 22:35:29 by elakhfif         ###   ########.fr        #
+#    Updated: 2022/10/25 06:53:27 by elakhfif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,15 +50,15 @@ SRC =		ft_isalpha.c\
 			ft_strncmp.c\
 			ft_strmapi.c\
 
-BONUSSRC = 	ft_lstnew.c\
-			ft_lstadd_front.c\
-			ft_lstsize.c\
-			ft_lstlast.c\
-			ft_lstadd_back.c\
-			ft_lstdelone.c\
-			ft_lstclear.c\
-			ft_lstiter.c\
-			ft_lstmap.c\
+BONUSSRC = 	ft_lstnew_bonus.c\
+			ft_lstadd_front_bonus.c\
+			ft_lstsize_bonus.c\
+			ft_lstlast_bonus.c\
+			ft_lstadd_back_bonus.c\
+			ft_lstdelone_bonus.c\
+			ft_lstclear_bonus.c\
+			ft_lstiter_bonus.c\
+			ft_lstmap_bonus.c\
 
 OBJ = $(SRC:%.c=%.o)
 
@@ -72,13 +72,13 @@ $(NAME) : $(OBJ)
 %.o : %.c $(INC)													
 		gcc -c $(CFLAGS) $< -o $@
 
-bonus : $(OBJBONUS) $(OBJ)
-		ar rc $(NAME) $(OBJBONUS) $(OBJ)
+bonus : $(OBJBONUS)
+		ar rc $(NAME) $(OBJBONUS)
 
 clean :
-		@rm -rf $(OBJ) $(OBJBONUS)
+		@rm -rf $(OBJBONUS) $(OBJ)
 
 fclean :
-		@rm -f $(NAME) $(OBJ) $(OBJBONUS)
+		@rm -f $(NAME) $(OBJBONUS) $(OBJ)
 
 re : fclean all

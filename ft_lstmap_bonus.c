@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 14:38:04 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/22 19:09:41 by elakhfif         ###   ########.fr       */
+/*   Created: 2022/10/25 06:58:16 by elakhfif          #+#    #+#             */
+/*   Updated: 2022/10/25 06:58:19 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	unsigned char	*a;
-	size_t			i;
+	t_list	*ptr;
+	t_list	*new;
 
-	a = s;
-	i = 0;
-	while (i < n)
+	if (!f || !lst)
+		return (NULL);
+	ptr = ft_lstnew(f(lst->content));
+	lst = lst->next;
+	while (lst)
 	{
-		a[i] = 0;
-		i++;
+		new = ft_lstnew(f(lst->content));
+		if (!new)
+		{
+			ft_lstclear(&ptr, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&ptr, new);
+		lst = lst->next;
 	}
+	return (ptr);
 }
-/*
-int main()
-{
-    int t[4] = { 5, 4, 3, 2};
-    ft_bzero(t,6);
-    int i = 0;
-    while(i < 4)
-    printf("%d\n",t[i++]);
-}
-*/

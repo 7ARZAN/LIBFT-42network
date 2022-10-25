@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 14:38:04 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/22 19:09:41 by elakhfif         ###   ########.fr       */
+/*   Created: 2022/10/25 06:57:19 by elakhfif          #+#    #+#             */
+/*   Updated: 2022/10/25 06:57:22 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+t_list	*ft_lstlast(t_list *lst)
 {
-	unsigned char	*a;
-	size_t			i;
+	t_list	*nxt;
 
-	a = s;
-	i = 0;
-	while (i < n)
+	nxt = lst;
+	while (nxt)
 	{
-		a[i] = 0;
-		i++;
+		if (nxt->next)
+			nxt = nxt->next;
+		else
+			return (nxt);
 	}
+	return (NULL);
 }
-/*
-int main()
-{
-    int t[4] = { 5, 4, 3, 2};
-    ft_bzero(t,6);
-    int i = 0;
-    while(i < 4)
-    printf("%d\n",t[i++]);
-}
-*/

@@ -1,37 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 14:38:04 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/22 19:09:41 by elakhfif         ###   ########.fr       */
+/*   Created: 2022/10/25 06:54:20 by elakhfif          #+#    #+#             */
+/*   Updated: 2022/10/25 06:54:27 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	unsigned char	*a;
-	size_t			i;
-
-	a = s;
-	i = 0;
-	while (i < n)
-	{
-		a[i] = 0;
-		i++;
-	}
+	new->next = *lst;
+	*lst = new;
 }
 /*
 int main()
 {
-    int t[4] = { 5, 4, 3, 2};
-    ft_bzero(t,6);
-    int i = 0;
-    while(i < 4)
-    printf("%d\n",t[i++]);
+	t_list	*a;
+	t_list	*b;
+	t_list	*head;
+
+	a = ft_lstnew("TARZAN");
+	b = ft_lstnew("BIBA KHAWA DIALY");
+	head = a;
+
+	ft_lstadd_front(&head, b);
+	while (head)
+	{
+		printf("%s", head->content);
+		head = head->next;
+	}
 }
 */

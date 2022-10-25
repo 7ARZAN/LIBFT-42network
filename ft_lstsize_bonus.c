@@ -1,37 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 14:38:04 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/22 19:09:41 by elakhfif         ###   ########.fr       */
+/*   Created: 2022/10/25 06:59:44 by elakhfif          #+#    #+#             */
+/*   Updated: 2022/10/25 06:59:47 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_lstsize(t_list *lst)
 {
-	unsigned char	*a;
-	size_t			i;
+	int		len;
+	t_list	*next;
 
-	a = s;
-	i = 0;
-	while (i < n)
+	len = 0;
+	next = lst;
+	while (next != NULL)
 	{
-		a[i] = 0;
-		i++;
+		next = next->next;
+		len++;
 	}
+	return (len);
 }
 /*
 int main()
 {
-    int t[4] = { 5, 4, 3, 2};
-    ft_bzero(t,6);
-    int i = 0;
-    while(i < 4)
-    printf("%d\n",t[i++]);
+	t_list	*a;
+	t_list	*b;
+	t_list	*head;
+
+	a = ft_lstnew("TARZAN ");
+	b = ft_lstnew("Houscein");
+	a->next = b;
+	head = a;
+	printf("%d", ft_lstsize(head));
 }
 */

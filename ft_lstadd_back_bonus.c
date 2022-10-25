@@ -1,37 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 14:38:04 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/22 19:09:41 by elakhfif         ###   ########.fr       */
+/*   Created: 2022/10/25 06:51:20 by elakhfif          #+#    #+#             */
+/*   Updated: 2022/10/25 06:51:30 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	unsigned char	*a;
-	size_t			i;
+	t_list	*current;
 
-	a = s;
-	i = 0;
-	while (i < n)
+	current = *lst;
+	if (!current)
 	{
-		a[i] = 0;
-		i++;
+		*lst = new;
+		return ;
+	}
+	while (current)
+	{
+		if (current->next)
+			current = current->next;
+		else
+		{
+			current->next = new;
+			break ;
+		}
 	}
 }
 /*
 int main()
 {
-    int t[4] = { 5, 4, 3, 2};
-    ft_bzero(t,6);
-    int i = 0;
-    while(i < 4)
-    printf("%d\n",t[i++]);
+	t_list	*a;
+	t_list	*b;
+	t_list	*head;
+
+	a = ft_lstnew("aaaaa");
+	b = ft_lstnew("bbbbb");
+	head = a;
+	ft_lstadd_back(&head,b);
+	while (head)
+	{
+		printf("%s->", head->content);
+		head = head->next;
+	}
 }
 */

@@ -1,37 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 14:38:04 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/22 19:09:41 by elakhfif         ###   ########.fr       */
+/*   Created: 2022/10/25 06:56:29 by elakhfif          #+#    #+#             */
+/*   Updated: 2022/10/25 06:56:32 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	unsigned char	*a;
-	size_t			i;
+	t_list	*current;
 
-	a = s;
-	i = 0;
-	while (i < n)
+	current = lst;
+	while (current)
 	{
-		a[i] = 0;
-		i++;
+		f(current->content);
+		current = current->next;
 	}
 }
 /*
+void	f(void *content)
+{
+	printf("%s", content);
+}
 int main()
 {
-    int t[4] = { 5, 4, 3, 2};
-    ft_bzero(t,6);
-    int i = 0;
-    while(i < 4)
-    printf("%d\n",t[i++]);
+	t_list	*a;
+	t_list	*b;
+	t_list	*head;
+
+	a = ft_lstnew("TAFESR");
+	b = ft_lstnew("FGDRGDFGDFG");
+	a->next = b;
+	head = a;
+
+	ft_lstiter(head, f);
 }
 */
