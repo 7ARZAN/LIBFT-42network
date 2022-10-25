@@ -11,9 +11,9 @@
 
                                             -- -- -- MY SOCIALMEDIA FOLLOW ME :-- -- --
                                            |                                           |
-                                           |        instagram : @tarzaannnnnn.         |
-                                           |        twitter : @tarzan4_                |
-                                           |        snapchat : @tarzaannnnnn.          |
+                                           |        instagram : @tarzaannnnnn ^^       |
+                                           |        twitter : @tarzan4_   ^^           |
+                                           |        snapchat : @tarzaannnnnn ^^        |
                                            |                                           |
                                            -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
                                                                                                                  
