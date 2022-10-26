@@ -6,7 +6,7 @@
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 06:51:20 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/25 06:51:30 by elakhfif         ###   ########.fr       */
+/*   Updated: 2022/10/26 07:08:24 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,14 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 /*
 int main()
 {
-	t_list	*a;
-	t_list	*b;
+	t_list	*A;
+	t_list	*B;
 	t_list	*head;
 
-	a = ft_lstnew("aaaaa");
-	b = ft_lstnew("bbbbb");
-	head = a;
-	ft_lstadd_back(&head,b);
+	A = ft_lstnew("aaaaa");
+	B = ft_lstnew("bbbbb");
+	head = A;
+	ft_lstadd_back(&head,B);
 	while (head)
 	{
 		printf("%s->", head->content);
